@@ -1,0 +1,726 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f5;
+    color: #4a2c2a;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background-color: #5c2c2c;
+}
+
+nav {
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1,
+nav h2 {
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd6a5;
+}
+
+
+/* =========================
+   HOME / HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+    background-image: url("images/bakery.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 700px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-content h1,
+.hero-content h2 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background-color: #e87561;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #c95745;
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+#products {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: white;
+
+    width: 270px;
+    padding: 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.product-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.product-card span {
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    color: #e87561;
+    margin-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Product Images */
+
+.product-image {
+    width: 100%;
+    height: 180px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 12px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+}
+
+.product-card span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e87561;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-us {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: #fff8f5;
+}
+
+.why-us h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: white;
+
+    width: 270px;
+    padding: 30px 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+.feature div {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+}
+
+.feature div {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background-color: #ffe1d6;
+
+    text-align: center;
+
+    padding: 60px 15%;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ORDER
+========================= */
+
+/* =========================
+   ORDER
+========================= */
+
+.order {
+    background-color: #ffe1d6;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.order h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.order p {
+    margin-bottom: 25px;
+    color: #6b4a45;
+}
+
+#orderForm {
+    max-width: 450px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+#orderForm input,
+#orderForm select {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+#orderForm input:focus,
+#orderForm select:focus {
+    border-color: #e87561;
+}
+
+#orderForm button {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.order h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#orderForm {
+    max-width: 400px;
+    margin: auto;
+}
+
+#orderForm input,
+#orderForm select {
+    width: 100%;
+
+    padding: 12px;
+    margin: 10px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+#orderForm button {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #fff8f5;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin: 12px;
+    font-size: 17px;
+}
+
+.contact button {
+    margin-top: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #5c2c2c;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+.admin-login {
+    width: 90%;
+    max-width: 400px;
+
+    margin: 80px auto;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login h2 {
+    margin-bottom: 25px;
+}
+
+.admin-login input {
+    width: 90%;
+
+    padding: 12px;
+
+    margin: 8px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.admin-login button {
+    margin-top: 10px;
+}
+
+#loginMessage {
+    color: red;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   ADMIN ORDERS
+========================= */
+
+.admin-orders {
+    min-height: 100vh;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background-color: #fff7f2;
+}
+
+.admin-orders h2 {
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+.admin-orders .order-card {
+    max-width: 500px;
+
+    margin: 20px auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    text-align: left;
+}
+
+.admin-orders .order-card h3 {
+    margin-bottom: 15px;
+}
+
+.admin-orders .order-card p {
+    margin: 8px 0;
+}
+
+.admin-orders button {
+    margin: 10px;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Navigation */
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav h1,
+    nav h2 {
+        font-size: 23px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+
+    /* Home */
+
+    .hero {
+        min-height: 550px;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        padding: 30px 15px;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: 34px;
+        line-height: 1.25;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    /* Products */
+
+    #products {
+        padding: 45px 20px;
+    }
+
+    #products h2,
+    .why-us h2,
+    .about h2,
+    .contact h2,
+    .order h2 {
+        font-size: 26px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+
+    /* Product Images */
+
+    .product-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* Why Choose Us */
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+        max-width: 350px;
+    }
+
+
+    /* About */
+
+    .about {
+        padding: 45px 25px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+
+    /* Order */
+
+    .order {
+        padding: 45px 20px;
+    }
+
+    #orderForm {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* Contact */
+
+    .contact {
+        padding: 45px 20px;
+    }
+
+
+    /* Admin */
+
+    .admin-login {
+        margin: 50px auto;
+    }
+
+    .admin-orders {
+        padding: 45px 15px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        font-size: 14px;
+    }
+}
