@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweet Cakes Bakery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h1>Welcome to Sweet Cakes</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h2>Freshly Baked With Love ❤️</h2>
+
+            <p>
+                Delicious Cakes, Cupcakes & Cookies
+            </p>
+
+            <button onclick="goToOrder()">Order Now</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products">
+
+        <h2>Our Delicious Products</h2>
+
+        <div class="products">
+
+            <!-- Chocolate Cake -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/cake.jpg" alt="Chocolate Cake">
+                </div>
+
+                <h3>Chocolate Cakes</h3>
+
+                <p>Rich and delicious chocolate cakes.</p>
+
+                <span>₹499</span>
+
+                <button onclick="selectProduct('Chocolate Cake')">
+                    Order Now
+                </button>
+
+            </div>
+
+
+            <!-- Cup Cake -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/cupcake.jpg" alt="Cup Cake">
+                </div>
+
+                <h3>Cup Cakes</h3>
+
+                <p>Soft and tasty cupcakes.</p>
+
+                <span>₹99</span>
+
+                <button onclick="selectProduct('Cup Cake')">
+                    Order Now
+                </button>
+
+            </div>
+
+
+            <!-- Cookies -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/cookies.jpg" alt="Cookies">
+                </div>
+
+                <h3>Cookies</h3>
+
+                <p>Crispy and freshly baked cookies.</p>
+
+                <span>₹149</span>
+
+                <button onclick="selectProduct('Cookies')">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Why Choose Us -->
+        <section class="why-us">
+
+            <h2>Why Choose to Sweet Cakes? ❤️</h2>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div>🥐</div>
+
+                    <h3>Fresh Products</h3>
+
+                    <p>
+                        Our bakery products are freshly prepared every day.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div>❤️</div>
+
+                    <h3>Made With Love</h3>
+
+                    <p>
+                        We make every cake with care and love.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div>⭐</div>
+
+                    <h3>Best Quality</h3>
+
+                    <p>
+                        We provide tasty and high-quality bakery products.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about">
+
+            <h2>About Us</h2>
+
+            <p>
+                Sweet Cakes is a small bakery that makes fresh,
+                delicious and beautiful cakes, pastries and cookies
+                for every special occasion.
+            </p>
+
+        </section>
+
+
+        <!-- Order Section -->
+        <section id="order" class="order">
+
+            <h2>Place Your Order 🍰</h2>
+
+            <p>Fill in your details to place an order.</p>
+
+            <form id="orderForm">
+
+                <!-- Customer Name -->
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <!-- Mobile Number -->
+                <input type="tel" id="mobile" placeholder="Enter your mobile number" pattern="[0-9]{10}" maxlength="10"
+                    required>
+
+                <!-- Address -->
+                <textarea id="address" placeholder="Enter your address" rows="4" required></textarea>
+
+                <!-- Product -->
+                <select id="cake" required>
+
+                    <option value="">
+                        Select a product
+                    </option>
+
+                    <option value="Chocolate Cakes">
+                        Chocolate Cakes
+                    </option>
+
+                    <option value="Cup Cakes">
+                        Cup Cakes
+                    </option>
+
+                    <option value="Cookies">
+                        Cookies
+                    </option>
+
+                </select>
+
+
+                <!-- Quantity -->
+                <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+
+
+                <!-- Submit -->
+                <button type="submit">
+                    Place Order 🍰
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>📞 Phone: 80803 16725</p>
+
+            <p>📧 Email: janavinarsale1@gmail.com</p>
+
+            <p>
+                📍 Address: Chas, Ahilyanagar, Maharashtra 414005
+            </p>
+
+            <button onclick="contactUs()">
+                Contact Now
+            </button>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                © 2026 Sweet Cakes Bakery | Made with ❤️
+            </p>
+
+        </footer>
+
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+
+</body>
+
+</html>
